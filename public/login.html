@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Todo Application | Login</title>
+    <meta name="description" content="A FeathersJS server" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <script
+      src="https://unpkg.com/@feathersjs/client@^4.5.0/dist/feathers.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://unpkg.com/socket.io-client@^2.3.0/dist/socket.io.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./js/login.js" type="module"></script>
+  </head>
+  <body>
+    <div id="login">
+      <h1>Welcome Back, Login to your account</h1>
+
+      <form id="login-form">
+        <div class="form-input">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" />
+        </div>
+        <div class="form-input">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" />
+        </div>
+        <button type="submit">Login</button>
+
+        <div style="margin-bottom: 6vmin">
+          You don't have an account yet,
+          <a href="/register.html">Register here.</a>
+        </div>
+      </form>
+
+      <ul id="errors"></ul>
+    </div>
+  </body>
+</html>

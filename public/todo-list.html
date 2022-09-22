@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Todo Application | TodoList</title>
+    <meta name="description" content="A FeathersJS server" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <script
+      src="https://unpkg.com/@feathersjs/client@^4.5.0/dist/feathers.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://unpkg.com/socket.io-client@^2.3.0/dist/socket.io.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./js/todo-list.js" type="module"></script>
+  </head>
+  <body>
+    <div id="todo-list">
+      <div class="nav-bar">
+        <nav>
+          <h1><a href="/">TodoApp</a></h1>
+
+          <ul>
+            <li><a href="/kanban.html">KanBan</a></li>
+            <li><a href="/todo-list.html">TodoList</a></li>
+            <li class="logout-btn" id="logout-btn">Logout</li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="container">
+        <div class="todo-lists-container">
+          <div class="todo-lists-header">
+            <h3>TodoLists</h3>
+            <button id="new-todo-list-btn">New</button>
+          </div>
+
+          <div class="todo-lists"></div>
+        </div>
+
+        <div id="todo-list-tasks-container" class="todo-list-tasks-container">
+          <!-- <h3>Tasks</h3> -->
+
+          <div id="todo-list-tasks" class="todo-list-tasks"></div>
+        </div>
+      </div>
+
+      <div class="modal">
+        <h4>Create a new TodoList <span id="close-modal-btn">&times;</span></h4>
+
+        <form id="modal-form">
+          <div class="form-input">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" />
+          </div>
+          <button type="submit">Create</button>
+        </form>
+
+        <ul id="modal-errors"></ul>
+      </div>
+
+      <div class="task-modal">
+        <h4>Create a new TodoList <span id="close-task-modal-btn">&times;</span></h4>
+
+        <form id="task-modal-form">
+          <div class="form-input">
+            <label for="text">Text</label>
+            <input type="text" name="text" id="text" />
+          </div>
+          <button type="submit">Create</button>
+        </form>
+
+        <ul id="task-modal-errors"></ul>
+      </div>
+    </div>
+  </body>
+</html>
